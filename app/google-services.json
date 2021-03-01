@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "304992780441",
+    "project_id": "posifeed-2b185",
+    "storage_bucket": "posifeed-2b185.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304992780441:android:a02f54d4b32bdd01a4b808",
+        "android_client_info": {
+          "package_name": "com.posifeed.posifeed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "304992780441-s949tbjvkoc9hbvuiotpalppiqqdice7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZyOBHvlDd-fgMx_EiHzQeGiKqBAu3guM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "304992780441-s949tbjvkoc9hbvuiotpalppiqqdice7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
