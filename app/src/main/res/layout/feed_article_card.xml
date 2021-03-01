@@ -14,8 +14,8 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/profile_image"
             android:layout_width="96dp"
+            android:layout_marginLeft="5dp"
             android:layout_height="match_parent"
-            app:civ_border_width="2dp"
             app:civ_border_color="#FF000000"/>
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,14 +24,15 @@
             android:padding="16dp">
 
             <TextView
+                android:id="@+id/heading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Post Heading"
                 android:fontFamily="@font/mclaren"
-                android:textAppearance="?attr/textAppearanceHeadline6"
-                />
+                android:text="Post Heading"
+                android:textAppearance="?attr/textAppearanceHeadline6" />
 
             <TextView
+                android:id="@+id/date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -39,15 +40,25 @@
                 android:textAppearance="?attr/textAppearanceBody2"
                 android:textColor="@color/purple_700"
                 android:textSize="12sp" />
+
             <TextView
+                android:id="@+id/brief"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
                 android:fontFamily="@font/mclaren"
                 android:text="Brief description of the post"
                 android:textAppearance="?attr/textAppearanceBody2"
-                android:textColor="?android:attr/textColorSecondary"
-                />
+                android:textColor="?android:attr/textColorSecondary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/mclaren"
+                android:text="NEW!"
+                android:id="@+id/isNew"
+                android:textColor="@color/green"></TextView>
 
         </LinearLayout>
     </LinearLayout>
