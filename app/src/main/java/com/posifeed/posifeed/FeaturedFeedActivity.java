@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.firestore.CollectionReference;
@@ -46,7 +48,7 @@ public class FeaturedFeedActivity extends AppCompatActivity {
             public void onArticleClick(DocumentSnapshot documentSnapshot, int position) {
                 String articleID = documentSnapshot.getId();
 
-                Intent intent = new Intent(FeaturedFeedActivity.this, ArticleActivity.class);
+                Intent intent = new Intent(FeaturedFeedActivity.this, FeaturedArticleActivity.class);
                 intent.putExtra("articleID", articleID);
                 startActivity(intent);
             }

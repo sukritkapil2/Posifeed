@@ -42,7 +42,7 @@ public class FeedListActivity extends AppCompatActivity {
                         .setMessage("Please format your article request as follows: \n\n" +
                                 "1. Article Heading\n2. Article Brief\n3. Article Content\n" +
                                 "4. Article links (if any)\n5. Video links (if any)\n" +
-                                "6. Your Name\n\n\n Our Gmail: sukrit.kapil2@gmail.com").show();
+                                "6. Your name and photo\n\n\nSend the article here:\n\nGMAIL: posifeedsk@gmail.com\n\nFeel free to send any photos you want to add as well!").show();
             }
         });
 
@@ -58,7 +58,7 @@ public class FeedListActivity extends AppCompatActivity {
     }
 
     private void setUpFeedRecyclerView() {
-        Query query = collectionReference.orderBy("uploadDate", Query.Direction.ASCENDING);
+        Query query = collectionReference.orderBy("uploadDate", Query.Direction.DESCENDING);
 
         FirestoreRecyclerOptions<Article> options = new FirestoreRecyclerOptions.Builder<Article>()
                 .setQuery(query, Article.class)
@@ -90,5 +90,12 @@ public class FeedListActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         articleAdapter.stopListening();
+    }
+
+    public void onBackPressed(){
+        Intent a = new Intent(Intent.ACTION_MAIN);
+        a.addCategory(Intent.CATEGORY_HOME);
+        a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(a);
     }
 }

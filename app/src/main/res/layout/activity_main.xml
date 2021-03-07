@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,56 +10,54 @@
         android:id="@+id/heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="36dp"
         android:fontFamily="@font/mclaren"
         android:text="Posifeed"
         android:textColor="#1E1D1D"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerHorizontal="true"/>
 
     <TextView
         android:id="@+id/subHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/mclaren"
         android:text="Daily positive articles feed"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/heading" />
+        android:layout_below="@id/heading"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="144dp"
+        android:layout_height="192dp"
+        android:layout_marginTop="64dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/asset_2" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="318dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/mclaren"
+        android:text="A no nonsense reading app for daily postive reads with a minimilistic UI"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/enterButton"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/enterButton"
         android:layout_width="178dp"
-        android:layout_height="52dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="64dp"
+        android:layout_height="62dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
         android:text="Enter Posifeed"
         android:textAllCaps="false"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/desc"
-        app:layout_constraintVertical_bias="0.894" />
+        android:textSize="17sp"
+        android:layout_centerHorizontal="true"/>
 
-    <TextView
-        android:id="@+id/desc"
-        android:layout_width="319dp"
-        android:layout_height="88dp"
-        android:layout_marginTop="88dp"
-        android:fontFamily="@font/mclaren"
-        android:text="A no nonsense reading app for daily postive reads with a minimilistic UI"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/subHeading" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

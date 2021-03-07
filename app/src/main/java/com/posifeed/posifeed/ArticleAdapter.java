@@ -35,7 +35,7 @@ public class ArticleAdapter extends FirestoreRecyclerAdapter<Article, ArticleAda
         if(!model.getNew()) {
             holder.isNew.setVisibility(View.GONE);
         }
-        Glide.with(myContext.getApplicationContext()).load(model.getAuthorPic()).fitCenter().into(holder.author_pic);
+        Glide.with(myContext.getApplicationContext()).load(model.getArticlePic()).fitCenter().into(holder.author_pic);
     }
 
     @NonNull

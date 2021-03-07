@@ -57,6 +57,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/mclaren"
                 android:text="NEW!"
+                android:textFontWeight="700"
                 android:id="@+id/isNew"
                 android:textColor="@color/green"></TextView>
 

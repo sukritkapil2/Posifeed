@@ -33,7 +33,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class ArticleActivity extends AppCompatActivity {
+public class FeaturedArticleActivity extends AppCompatActivity {
 
     private String articleID;
     private FirebaseFirestore db;
@@ -50,7 +50,7 @@ public class ArticleActivity extends AppCompatActivity {
 
         articleID = getIntent().getStringExtra("articleID");
         db = FirebaseFirestore.getInstance();
-        dr = db.collection("articles").document(articleID);
+        dr = db.collection("featured-articles").document(articleID);
         heading = findViewById(R.id.heading);
         desc = findViewById(R.id.desc);
         image1 = findViewById(R.id.image1);
@@ -63,7 +63,7 @@ public class ArticleActivity extends AppCompatActivity {
         addComment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ArticleActivity.this, CommentActivity.class);
+                Intent intent = new Intent(FeaturedArticleActivity.this, CommentActivity.class);
                 intent.putExtra("articleID", articleID);
                 startActivity(intent);
             }
